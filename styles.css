@@ -1,6 +1,6 @@
 body {
     padding: 1%;
-    background-color: green;
+    /* background-color: green; */
 
 }
 
@@ -11,7 +11,7 @@ h1 {
 #calculatorContainer {
     display: flex;
     flex-direction: row;
-    background-color: red;
+    /* background-color: red; */
     align-content: center;
     align-items: center;
     justify-content: center;
@@ -23,17 +23,18 @@ h1 {
 .calculator {
     display: flex;
     flex-direction: column;
-    background-color: aqua;
+    /* background-color: aqua; */
     height: auto;
     width: auto;
-    padding: 10px;
+    border: 1px grey solid;
+    box-shadow: 10px 10px 10px;
 
 }
 
 #display {
     text-align: right;
     font-weight: bold;
-    background-color: aliceblue;
+    background-color: rgb(238, 238, 238);
     padding: 1em;
 }
 
@@ -42,7 +43,16 @@ h1 {
     
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 50px 50px 50px 50px;
-    background-color: greenyellow;
+    background-color: lightgrey;
     grid-gap: 5px;
     padding: 10px;
+}
+
+button {
+    border: 1px solid
+    
+}
+button:hover {
+    background-color: black;
+    color: white;
 }
