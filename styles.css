@@ -4,6 +4,9 @@ body {
 
 }
 
+h1 {
+    text-align: center;
+}
 
 #calculatorContainer {
     display: flex;
@@ -11,8 +14,9 @@ body {
     background-color: red;
     align-content: center;
     align-items: center;
-    height: 60vh;
-    min-height: 600px;
+    justify-content: center;
+    margin-top: 5em;
+    padding: 10px;
 
 }
 
@@ -21,17 +25,16 @@ body {
     flex-direction: column;
     background-color: aqua;
     height: auto;
-    width: 30%;
-    margin-left: auto;
-    margin-right: auto;
-    align-items: left;
-  
+    width: auto;
+    padding: 10px;
+
 }
 
 #display {
     text-align: right;
-    margin: 20px;
     font-weight: bold;
+    background-color: aliceblue;
+    padding: 1em;
 }
 
 .buttons-container {

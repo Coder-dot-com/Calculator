@@ -17,6 +17,7 @@ bottomDisplayValue = document.querySelector("#bottomDisplayValue")
 
 
 
+
 //buttons
 
 const numberButtons = document.querySelectorAll('.number');
@@ -29,6 +30,9 @@ function appendNumber(number) {
         bottomDisplayValue.textContent = ""
     }
     if (bottomDisplayValue.textContent == "0") {
+        bottomDisplayValue.textContent = ""
+    }
+    if (bottomDisplayValue.textContent == "ERROR") {
         bottomDisplayValue.textContent = ""
     }
     bottomDisplayValue.textContent += number
@@ -54,7 +58,10 @@ operatorButtons.forEach((button) =>
 function setOperator (operator) {
     if (currentOperator !== null) { 
     evaluate()
+}    if (bottomDisplayValue.textContent == "ERROR") {
+    clearDisplay
 }
+
     firstOperand = bottomDisplayValue.textContent
     topDisplayValue.textContent = bottomDisplayValue.textContent;
     bottomDisplayValue.textContent = 0
@@ -95,15 +102,25 @@ function calculate (operator, a, b) {
     } else if (operator == "x") {
         return bottomDisplayValue.textContent = multiply(a, b)
     } else if (operator == "/") {
-        return bottomDisplayValue.textContent = divide(a, b)
-    } else {
-        return bottomDisplayValue.textContent = "Error"
+        if (b == "0") {
+            return bottomDisplayValue.textContent  = "ERROR"
+        } else {return bottomDisplayValue.textContent = divide(a, b)
+    }} else {
+        return bottomDisplayValue.textContent = "ERROR"
     }
 }
 
 
 function evaluate () {
     secondOperand = bottomDisplayValue.textContent
+    if (secondOperand == "ERROR") {
+        clearDisplay()
+        
+    }
     console.log("equals called")
+
+    // if (secondOperand == "0" && currentOperator == "/") {
+    //     return 
+    // }
    calculate(currentOperator, firstOperand, secondOperand)
 }
