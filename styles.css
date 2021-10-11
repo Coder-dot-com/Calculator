@@ -1,14 +1,24 @@
 body {
     padding: 1%;
     /* background-color: green; */
-
+    
 }
 
 h1 {
     text-align: center;
 }
 
-#calculatorContainer {
+button {
+    border: 1px solid
+    
+}
+button:hover {
+    background-color: black;
+    color: white;
+}
+
+
+.calculator-container {
     display: flex;
     flex-direction: row;
     /* background-color: red; */
@@ -31,7 +41,7 @@ h1 {
 
 }
 
-#display {
+.display {
     text-align: right;
     font-weight: bold;
     background-color: rgb(238, 238, 238);
@@ -48,11 +58,3 @@ h1 {
     padding: 10px;
 }
 
-button {
-    border: 1px solid
-    
-}
-button:hover {
-    background-color: black;
-    color: white;
-}
